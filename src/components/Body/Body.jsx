@@ -15,13 +15,20 @@ function Body() {
           #giantVideoOverlayTextContainer {
             width: 844px;
             margin: 0;
+            height: 100%;
+            padding-top: 51px;
+          }
+          h1 {
             font-size: 72px;
+            color: #0077C5;
           }
       `}</style>
-    <GiantVideo/>
-    <div id="giantVideoOverlayContainer">
+      <GiantVideo/>
+      <div id="giantVideoOverlayContainer">
         <div id="giantVideoOverlayTextContainer">
-          <h1>See how the power of Intuit Giants can work for you</h1>
+          <h1>See how the<br/>
+          power of Intuit Giants<br/>
+          can work for you</h1>
         </div>
       </div>
     </div>

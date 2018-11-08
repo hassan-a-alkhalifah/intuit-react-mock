@@ -68,7 +68,7 @@ const dropDownLinksByCategory = {
     }
 
   ],
-  'Support_and_Communities': [
+  'Support and Communities': [
     {
       title: 'Product Support',
       links: [
@@ -188,12 +188,24 @@ function Header() {
             font-family: 'Lato', sans-serif;
           }
           .headerBottom {
-            border-bottom: 1px solid #d4d7dc;
-            height: 55px;
+            height: 100%;
             overflow: visible;
             display: inline-block;
             width: 100%;
+            max-width: 1200px;
             font-size: 16px;
+          }
+          .headerBottomContainer {
+            border-bottom: 1px solid #d4d7dc;
+            height: 55px;
+            display: flex;
+            width: 100%;
+          }
+          .headerTopContainer {
+            border-bottom: 1px solid #d4d7dc;
+            height: 55px;
+            display: flex;
+            width: 100%;
           }
           .listHeaders {
             display: flex;
@@ -213,21 +225,25 @@ function Header() {
           <a style={Object.assign({}, HeaderStyles.mintLogo, HeaderStyles.logoStyle)} href='#'>
           </a>
         </div>
-        <p>English(US)</p>
+        <div>
+          <p>English(US)</p>
+        </div>
       </div>
-      <div className="headerBottom">
-        <div style={HeaderStyles.headerSubBottom}>
-          <a style={Object.assign({}, HeaderStyles.intuitLogo, HeaderStyles.logoStyle)} href='#'>
-          </a>
-          <div className="listHeaders">
-            {Object.entries(dropDownLinksByCategory).map((category, index) => {
-              return(
-                <Dropdown
-                  category={category}
-                  key={index}
-                />
-              );
-            })}
+      <div className="headerBottomContainer">
+        <div className="headerBottom">
+          <div style={HeaderStyles.headerSubBottom}>
+            <a style={Object.assign({}, HeaderStyles.intuitLogo, HeaderStyles.logoStyle)} href='#'>
+            </a>
+            <div className="listHeaders">
+              {Object.entries(dropDownLinksByCategory).map((category, index) => {
+                return(
+                  <Dropdown
+                    category={category}
+                    key={index}
+                    />
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

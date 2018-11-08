@@ -18,6 +18,9 @@ function Dropdown(category) {
           z-index: 510;
           margin-left: 5px;
         }
+        .category:nth-child(2) p {
+          width: 178px;
+        }
         .category:nth-child(3)  {
           z-index: 515;
           margin-left: 115px;
@@ -34,6 +37,7 @@ function Dropdown(category) {
         }
         .category:hover p{
           font-weight: 900;
+          width: 190px;
         }
         .dropdownMenu {
           display: none;
