@@ -6,7 +6,7 @@ function Dropdown(category) {
 
   return(
     <div className="category">
-      <style jsx>{`
+      <style global jsx>{`
         .category  {
           width: 100px;
           display: inline-block;
@@ -22,8 +22,18 @@ function Dropdown(category) {
           z-index: 15;
           margin-left: 115px;
         }
+        .category:nth-child(3) .dropdownMenu div h5 {
+          display: none;
+        }
+        .category .dropdownMenu div:last-child {
+          border-bottom: none!important;
+        }
         .category:hover .dropdownMenu{
           display: inline-block;
+          border-top: solid 4px #0077c5;
+        }
+        .category:hover p{
+          font-weight: 900;
         }
         .dropdownMenu {
           display: none;
@@ -31,7 +41,8 @@ function Dropdown(category) {
           border-left: 1px solid #d4d7dc;
           border-right: 1px solid #d4d7dc;
           border-bottom: 1px solid #d4d7dc;
-          margin-top: 19px;
+          margin-top: 15px;
+          padding: 10px 10px;
         }
       `}</style>
       <p>{category.category[0]}</p>
