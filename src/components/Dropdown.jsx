@@ -12,14 +12,14 @@ function Dropdown(category) {
           display: inline-block;
         }
         .category:nth-child(1)  {
-          z-index: 5;
+          z-index: 555;
         }
         .category:nth-child(2)  {
-          z-index: 10;
+          z-index: 510;
           margin-left: 5px;
         }
         .category:nth-child(3)  {
-          z-index: 15;
+          z-index: 515;
           margin-left: 115px;
         }
         .category:nth-child(3) .dropdownMenu div h5 {
@@ -42,7 +42,7 @@ function Dropdown(category) {
           border-right: 1px solid #d4d7dc;
           border-bottom: 1px solid #d4d7dc;
           margin-top: 15px;
-          padding: 10px 10px;
+          box-shadow: 0px 1px 6px -1px rgba(0,0,0,0.3);
         }
       `}</style>
       <p>{category.category[0]}</p>

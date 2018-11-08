@@ -8,7 +8,7 @@ function NavSection(props) {
   };
   const navSectionHeaderStyles = {
     fontWeight: '900',
-    padding: '10px 0',
+    padding: '10px',
     fontSize: '16px',
     color: '#8d9096'
   };
@@ -16,10 +16,15 @@ function NavSection(props) {
     display: 'block',
     color: 'black',
     textDecoration: 'none',
-    padding: '10px 0'
+    padding: '10px',
   };
   return(
     <div style={navSectionStyles}>
+      <style jsx>{`
+          a:hover {
+            background: #eceef1;
+          }
+      `}</style>
       <h5 style={navSectionHeaderStyles}>{props.section.title}</h5>
       {props.section.links.map((link, index)=> {
         return(
